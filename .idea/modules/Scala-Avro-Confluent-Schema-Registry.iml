@@ -11,6 +11,28 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.10.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.10.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.10.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.luben:zstd-jni:1.4.4-7:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.confluent:common-config:5.5.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.confluent:common-utils:5.5.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.confluent:kafka-avro-serializer:5.5.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.confluent:kafka-schema-registry-client:5.5.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.confluent:kafka-schema-serializer:5.5.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.swagger:swagger-annotations:1.6.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: jakarta.annotation:jakarta.annotation-api:1.3.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: jakarta.ws.rs:jakarta.ws.rs-api:2.1.6:jar" level="project" />
+    <orderEntry type="library" name="sbt: javax.ws.rs:javax.ws.rs-api:2.1.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.avro:avro:1.9.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.commons:commons-compress:1.19:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.kafka:kafka-clients:5.5.1-ccs:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.glassfish.hk2.external:jakarta.inject:2.6.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.glassfish.hk2:osgi-resource-locator:1.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.glassfish.jersey.core:jersey-common:2.30:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.lz4:lz4-java:1.7.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.12.12:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.30:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.xerial.snappy:snappy-java:1.1.7.3:jar" level="project" />
   </component>
 </module>
