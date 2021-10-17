@@ -2,10 +2,11 @@ package bigdata.avro.schema.registry
 
 import io.confluent.kafka.schemaregistry.ParsedSchema
 import io.confluent.kafka.schemaregistry.avro.AvroSchema
-import io.confluent.kafka.schemaregistry.client.CachedSchemaRegistryClient
-import org.apache.avro.{ Schema, SchemaBuilder }
+import io.confluent.kafka.schemaregistry.client.{CachedSchemaRegistryClient, SchemaMetadata}
+import org.apache.avro.{Schema, SchemaBuilder}
 
 import java.io.InputStream
+import scala.collection.JavaConverters._
 import scala.io.Source
 
 object SampleSchemaRegistry extends App {
@@ -41,9 +42,20 @@ object SampleSchemaRegistry extends App {
 
   // 3. register the schema
   val id = srClient.register("Movie", new AvroSchema(movieSchemaProgrammatically).asInstanceOf[ParsedSchema])
-  //srClient.register()
-
   println(s"Registered 'movie' schema with ID $id")
+
+  // 2- Retrieve schema (most of the time, we use this method)
+  // 2.a- retrieve the ID of the latest version of the schema of the subject
+  val movieSubjectMetadata: SchemaMetadata = srClient.getLatestSchemaMetadata("Movie")
+  println(s"Version: ${movieSubjectMetadata.getVersion}")
+  println(s"ID: ${movieSubjectMetadata.getId}")
+  // 2.b- retrieve the schema by ID which is a unique number
+  val movieSchema: ParsedSchema = srClient.getSchemaById(movieSubjectMetadata.getId)
+
+  // 3- use the schema
+  println(movieSchema)
+  srClient.getAllSubjectsById(562).asScala.toList foreach println // get Subject name
+
 
   /**
    * Exercise: register the schema for 'rating'
