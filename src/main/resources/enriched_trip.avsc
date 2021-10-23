@@ -3,6 +3,12 @@
   "name": "enriched_trip",
   "namespace": "ca.mcit.bigdata.avro.schema",
   "fields": [
+    { "name": "start_date", "type": "string" },
+    { "name": "start_station_code", "type": "int" },
+    { "name": "end_date", "type": "string" },
+    { "name": "end_station_code", "type": "int" },
+    { "name": "duration_sec", "type": "int" },
+    { "name": "is_member", "type": "int" },
     { "name": "system_id", "type": "string" },
     { "name": "timezone", "type": "string" },
     { "name": "station_id", "type": "int" },
